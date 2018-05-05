@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function toggleClasses(element, ...classNames) {
-    classNames.forEach(name => element.classList.toggle(name));
+    classNames.forEach(name => element.classList.toggle(name));    
   }
 
   function startGame() {
     // get random words and append them to the DOM
     var wordList = document.getElementById("word-list");
-    var randomWords = getRandomValues(words, wordCount);
+    var randomWords = getRandomValues(words);
     randomWords.forEach((word) => {
       var li = document.createElement("li");
       li.innerText = word;
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // set a secret password and the guess count display
     password = getRandomValues(randomWords, 1)[0];
     setGuessCount(guessCount);
-    
+
     // add update listener for clicking on a word
     wordList.addEventListener('click', updateGame);
   }
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       var idx2 = Math.floor(Math.random() * (idx1 + 1));
 
       // swap elements at idx1 and idx2
-      [arrayCopy[idx1], arrayCopy[idx2]] = [arrayCopy[idx1], arrayCopy[idx2]];
+      [arrayCopy[idx1], arrayCopy[idx2]] = [arrayCopy[idx2], arrayCopy[idx1]];
     }
     return arrayCopy;
   }
