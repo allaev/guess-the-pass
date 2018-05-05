@@ -1,0 +1,95 @@
+* {
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+}
+
+body {
+  background-color: #e9ebee;
+}
+
+#start-screen,
+#game-screen {
+  text-align: center;
+  overflow: hidden;  
+}
+
+#game-screen.show {
+  transition-delay: 1s;
+}
+
+.show {
+  max-height: 1000px;
+  transition-duration: 1s;
+  display: block;
+}
+
+.hide {
+  max-height: 0;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+
+#start {
+  background-color: #4267b2;
+  border: 1px solid #29487d;
+  border-radius: 5px;
+  font-size: 3em;
+  display: block;
+  margin: 30px auto;
+  padding: 5px 20px;
+  color: white;
+}
+
+#start:hover {
+  cursor: pointer;
+  background-color: #29487d;
+}
+
+#start:active,
+#start:focus {
+  outline: none;
+}
+
+#word-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#word-list > li {
+  padding: 5px;
+}
+
+#word-list > li.disabled {
+  color: rgba(0,0,0,0.4);
+}
+
+#word-list > li:not(.disabled):hover {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#winner {
+  color: #25D366;
+  font-weight: bold;
+}
+
+#winner a::before {
+  content: url(../img/winner.svg);
+  width: 20px;
+  height: auto;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#loser {
+  color: #dd4b39;
+  font-weight: bold;
+}
+
+#loser a::before {
+  content: url(../img/loser.svg);
+  width: 20px;
+  height: auto;
+  display: inline-block;
+  margin: 0 5px;
+}
