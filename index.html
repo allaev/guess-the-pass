@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Guess the Password</title>
+  </head>
+  <body>
+    <div id="start-screen" class="show">    
+      <h1>Guess the Password</h1>
+      <p>Given a list of potential passwords, try to guess the correct one.</p>
+      <p>If you're wrong, we'll tell you how many letters are correct.</p>
+      <button id="start">Start</button>
+    </div>
+    <div id="game-screen" class="hide">
+      <ul id="word-list"></ul>
+      <p>Click on a word to make a guess.</p>
+      <p id="guesses-remaining"></p>
+      <p id="winner" class="hide">Congratulations! You win!<a href="./index.html">Play again?</a></p>
+      <p id="loser" class="hide">Sorry, you lost<a href="./index.html">Play again?</a></p>
+    </div>
+  </body>
 </html>
