@@ -93,3 +93,19 @@ body {
   display: inline-block;
   margin: 0 5px;
 }
+
+h1::before{
+ content: url(../img/anon.svg);
+ display: inline-block;
+ width: 30px;
+ opacity: 0.5;
+ margin-right: 20px;
+}
+
+h1::after{
+ content: url(../img/lock.svg);
+ display: inline-block;
+ width: 30px;
+ opacity: 0.5;
+ margin-left: 20px;
+}
